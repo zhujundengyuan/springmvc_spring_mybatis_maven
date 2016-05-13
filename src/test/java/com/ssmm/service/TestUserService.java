@@ -30,7 +30,6 @@ public class TestUserService {
 	
 	@Test
 	public void getUserById(){
-//		配置了缓存，相同查询只会执行一次
 		User user = userService.getUserById(2);
 		logger.info(JSON.toJSONString(user));
 		User user2 = userService.getUserById(2);
@@ -42,8 +41,8 @@ public class TestUserService {
 	@Test
 	public void saveUser(){
 		User user = new User();
-		user.setAge(22);
-		user.setUsername("test05");
+		user.setAge(33);
+		user.setUsername("dengyuan");
 		user.setPassword("123456");
 		
 		userService.saveUser(user);
